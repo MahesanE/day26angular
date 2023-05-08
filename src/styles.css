@@ -1,0 +1,11 @@
+/* Change the background color to a gradient */
+body {
+    background: linear-gradient(45deg, #a8edea 0%, #fed6e3 100%);
+  }
+  
+  /* Make the box color lighter */
+  mat-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

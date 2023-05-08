@@ -1,0 +1,24 @@
+<div class="container">
+    <h1>Games List</h1>
+    <mat-card *ngFor="let game of games">
+      <mat-card-title>{{ game.name }}</mat-card-title>
+    </mat-card>
+  
+    <div class="navigation-buttons">
+      <button mat-raised-button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }}</span>
+      <button mat-raised-button (click)="nextPage()">Next</button>
+    </div>
+  
+    <div class="results-control">
+      <mat-form-field appearance="fill">
+        <mat-label>Results per page</mat-label>
+        <mat-select [(ngModel)]="numberOfResults" (selectionChange)="getGames()">
+          <mat-option value="5">5</mat-option>
+          <mat-option value="10">10</mat-option>
+          <mat-option value="20">20</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  
